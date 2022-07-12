@@ -121,7 +121,7 @@ CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS   
 12. В клиенте проверил, что данные на месте.
 ```bash
 select * from test;
- i | amount
+i | amount
 1 |    100
 2 |    500
 (2 строки)
