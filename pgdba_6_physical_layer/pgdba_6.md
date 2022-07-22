@@ -58,27 +58,27 @@ Ver Cluster Port Status Owner    Data directory              Log file
 ```
 8. Проверим содержимое кластера
 ```bash
-								 \l
-								  Список баз данных
-								  Имя    | Владелец | Кодировка | LC_COLLATE  |  LC_CTYPE   |     Права доступа
-								  -----------+----------+-----------+-------------+-------------+-----------------------
-								  postgres  | postgres | UTF8      | ru_RU.UTF-8 | ru_RU.UTF-8 |
-								  template0 | postgres | UTF8      | ru_RU.UTF-8 | ru_RU.UTF-8 | =c/postgres + postgres=CTc/postgres
-								  template1 | postgres | UTF8      | ru_RU.UTF-8 | ru_RU.UTF-8 | =c/postgres + postgres=CTc/postgres
-								  test      | postgres | UTF8      | ru_RU.UTF-8 | ru_RU.UTF-8 |
-								  (4 строки)
-								  \c test
-								  \dt
-								  Список отношений
-								  Схема  | Имя  |   Тип   | Владелец
-								  --------+------+---------+----------
-								  public | test | таблица | postgres
-								  (1 строка)
-								  select * from test;
-								  i | amount
-								  ---+--------
-								  1 |    100
-								  2 |    500
-								  (2 строки)
+\l
+Список баз данных
+Имя    | Владелец | Кодировка | LC_COLLATE  |  LC_CTYPE   |     Права доступа
+-----------+----------+-----------+-------------+-------------+-----------------------
+postgres  | postgres | UTF8      | ru_RU.UTF-8 | ru_RU.UTF-8 |
+template0 | postgres | UTF8      | ru_RU.UTF-8 | ru_RU.UTF-8 | =c/postgres + postgres=CTc/postgres
+template1 | postgres | UTF8      | ru_RU.UTF-8 | ru_RU.UTF-8 | =c/postgres + postgres=CTc/postgres
+test      | postgres | UTF8      | ru_RU.UTF-8 | ru_RU.UTF-8 |
+(4 строки)
+\c test
+\dt
+Список отношений
+Схема  | Имя  |   Тип   | Владелец
+--------+------+---------+----------
+public | test | таблица | postgres
+(1 строка)
+select * from test;
+i | amount
+---+--------
+1 |    100
+2 |    500
+2 строки)
 ```
 Все данные на месте.
