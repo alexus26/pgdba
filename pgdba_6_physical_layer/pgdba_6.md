@@ -10,8 +10,13 @@ sudo apt update && sudo apt upgrade -y -q && sudo sh -c 'echo "deb http://apt.po
 Ver Cluster Port Status Owner    Data directory              Log file
 14  main    5432 online postgres /var/lib/postgresql/14/main /var/log/postgresql/postgresql-14-main.log
 ```
-2. Добавили новый жесткий диск к ВМ в Virtualbox, инициализировал его, разметил и добавил в **fstab** для автоматической загрузки
+2. Добавили новый жесткий диск к ВМ в Virtualbox
+![Alt text](https://github.com/alexus26/pgdba/blob/main/pgdba_6_physical_layer/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202022-07-22%2011-10-06.png "a title")
+
+инициализировал его, разметил и добавил в **fstab** для автоматической загрузки
+
 `/dev/disk/by-partlabel/primary	/home/alexus/pg_tablespaces	ext4	defaults 0 2`
+
 3. Выдаем права на папку, в которую смотнирован новый жесткий диск, для пользователя postgresql
 `drwxrwxrwx 3 postgres postgres 4096 июл 21 18:23 pg_tablespaces`
 4. Остановил кластер PosgreSQL
