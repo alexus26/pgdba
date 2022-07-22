@@ -29,7 +29,8 @@ Ver Cluster Port Status Owner    Data directory              Log file
 ```bash
 июл 22 07:33:27 pg1 postgresql@14-main[14690]: Error: /var/lib/postgresql/14/main is not accessible or does not exist
 ```
-Ошибка понятна, мы же перенесли (не скопировали, а именно вырезали) все содержимое в новую папку на новый диск
+Ошибка понятна, мы же перенесли (не скопировали, а именно вырезали) все содержимое в новую папку на новый диск.
+
 6. Идем редактировать файл */etc/postgresql/14/main/postgresql.conf,* находим в нем параметр *data_directory* и меняем на актуальную директорию
 `data_directory = '/home/alexus/pg_tablespaсes/14/main'`
 7. Запускаем кластер
