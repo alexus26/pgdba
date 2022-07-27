@@ -1,5 +1,5 @@
 # Логический уровень PostgreSQL
-1. создайте новый кластер PostgresSQL 13 (на выбор - GCE, CloudSQL)
+1. Создал ВМ в VirtualBox, поставил PG14.
 `14  main    5432 online postgres /home/alexus/pg_tablespaces/14/main /var/log/postgresql/postgresql-14-main.log`
 2. зайдите в созданный кластер под пользователем postgres
 ```bash
